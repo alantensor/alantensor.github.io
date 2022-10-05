@@ -25,6 +25,9 @@ a {
   width: 100%;
   position: fixed;
 }
+.projects{
+  color: whitesmoke;
+}
 
 .name {
   animation: animate 1s ease-in-out;
