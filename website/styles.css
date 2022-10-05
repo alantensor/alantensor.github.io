@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.content {
+  user-select: none;
+  font-family: "Open Sans", sans-serif;
+  color: whitesmoke;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.name {
+  animation: animate 1s ease-in-out;
+}
+
+.nav {
+  visibility: hidden;
+  animation: animate 1s ease-in-out;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+.a {
+  animation-delay: 300ms;
+}
+.b {
+  animation-delay: 400ms;
+}
+.c {
+  animation-delay: 500ms;
+}
+
+.name:hover {
+  color: lawngreen;
+}
+
+.nav:hover {
+  border-bottom: 1px solid whitesmoke;
+  padding-bottom: 2px;
+}
+@keyframes animate {
+  0% {
+    top: -20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
