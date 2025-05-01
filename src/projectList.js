@@ -3,7 +3,7 @@ export const projects = [
 		title: "Persective Projection",
 		description:
 		  "Rendering polygons through a moving camera using perspective projection and linear algebra. ",
-		href: "https://alantensor.github.io/pages/projects/cameratest/",
+		href: "https://alantensor.github.io/projects/cameratest/",
 		github: "https://github.com/alantensor/3D-Camera-Test",
 		imageName: "cubes.png",
 		tech: "JavaScript,HTML,CSS",
