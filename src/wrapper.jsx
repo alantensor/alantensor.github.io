@@ -73,6 +73,26 @@ export default function Wrapper() {
             >
               LinkedIn
             </motion.a>
+            <motion.a
+              href="https://twitter.com/weenislickers"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              Twitter/X
+            </motion.a>
+            <motion.a
+              href="https://news.ycombinator.com/user?id=alantensor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              Hacker News
+            </motion.a>
           </div>
         </motion.footer>
       </div>
