@@ -1,6 +1,6 @@
 import { FaSun, FaMoon } from "react-icons/fa";
 import { lazy, Suspense, useState, useEffect } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Wrapper from "./wrapper";
 const Experiments = lazy(() => import("./experiments/experiments"));
@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <button
         onClick={toggleDarkMode}
         className="fixed top-6 right-6 p-2 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors"
@@ -57,7 +57,7 @@ function App() {
           }
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
