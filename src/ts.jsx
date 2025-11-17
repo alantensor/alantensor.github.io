@@ -1,6 +1,6 @@
 export const ts = [
   {
-    name: "C++",
+    name: "C/C++",
     imageName: "cpp_logo.png",
   },
   {

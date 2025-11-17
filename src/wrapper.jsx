@@ -1,118 +1,80 @@
-import cartoon from "./assets/pic.png";
-import About from "./about";
-import Projects from "./project";
-import { FaArrowDown } from "react-icons/fa6";
 import { motion } from "framer-motion";
-// import Globe from 'react-globe.gl';
-
-import {
-  FaGithub,
-  FaLinkedin,
-  FaYCombinator,
-  FaEnvelope,
-} from "react-icons/fa";
-import { IoDocumentTextOutline } from "react-icons/io5";
-import { useEffect, useState } from "react";
+import About from "./about";
+import WorkExperiences from "./workExperiences";
+import Projects from "./project";
 
 export default function Wrapper() {
   return (
-    <div
-      id="scroll-container"
-      className="flex flex-col h-auto my-8 text-neutral-700 bg-white transition-colors dark:text-neutral-400 dark:bg-black space-y-5"
-    >
-      <div
-        id="home"
-        className="flex flex-row justify-between min-w-full m-auto border-2 border-neutral-800 rounded-2xl lg:max-w-[50%] lg:min-w-[50%] lg:min-h-64 max-h-96 select-none items-center"
-      >
-        <div className="flex flex-col space-y-5 w-full sm:w-[55%] py-10 pl-10">
-          <motion.div
-            className=""
-            initial={{ opacity: 0, y: -20 }}
+    <div className="min-h-screen bg-white dark:bg-black text-neutral-900 dark:text-neutral-100">
+      <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+        <motion.header
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <motion.h1
+            className="text-2xl md:text-3xl font-semibold mb-2"
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
-            {/* <img
-            src={cartoon}
-            className="h-24 w-24 rounded-full"
-            alt="profile picture"
-          /> */}
-            {/* <p className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient"> */}
-            <p className="text-2xl lg:text-5xl font-bold text-black dark:text-white">
-              Hi, I'm Alan.
-            </p>
-          </motion.div>
-          <motion.div
-            className=" "
-            initial={{ opacity: 0, y: -20 }}
+            Alan Zhou
+          </motion.h1>
+          <motion.p
+            className="text-neutral-600 dark:text-neutral-400 mb-6"
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
-            <div>
-              Developer and CS student{" "}
-              <a href="https://cs.ubc.ca" className="hover:underline">
-                @UBC.
-              </a>
-            </div>
-          </motion.div>
-          <motion.div
-            className="flex text-neutral-400 dark:text-white p-4 bg-neutral-100 shadow-xl dark:bg-neutral-800 rounded-xl text-2xl max-w-[75%] justify-between"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <a
-              className="hover:opacity-60"
-              href="https://github.com/alantensor"
-            >
-              <FaGithub />
-            </a>
-            <a
-              className="hover:opacity-60"
-              href="https://www.linkedin.com/in/therealalan/"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              className="hover:opacity-60"
-              href="https://news.ycombinator.com/user?id=alantensor"
-            >
-              <FaYCombinator />
-            </a>
-            <a className="hover:opacity-60" href="mailto:alanzhou318@gmail.com">
-              <FaEnvelope />
-            </a>
-            {/* <a
-            className="hover:opacity-60"
-            href="/resume_2024.pdf"
-            target="blank"
-          >
-            <IoDocumentTextOutline />
-          </a> */}
-          </motion.div>
-        </div>
-        <div className=" hidden md:block md:w-[45%] 2xl:w-[35%] p-10">
-          <div className="w-full border-2 border-red-300 aspect-square rounded-2xl p-3 hover:-rotate-[10deg] transition-all duration-500 ease-in-out">
-            <div className="w-full border-2 border-green-300 aspect-square rounded-2xl p-3 hover:rotate-[10deg] transition-all duration-500 ease-in-out">
-              <div className="w-full border-2 border-blue-300 aspect-square rounded-2xl p-3 hover:-rotate-[10deg] transition-all duration-500 ease-in-out">
-                <img
-                  className="bg-white rounded-2xl h-full w-full aspect-square "
-                  src={cartoon}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        id="about"
-        className="flex flex-col p-2 lg:p-10 m-auto min-w-full lg:min-w-[50%] lg:max-w-[50%] border-2 border-neutral-800 rounded-2xl select-none space-y-5"
-      >
+            Software Engineer
+          </motion.p>
+        </motion.header>
+
         <About />
-      </div>
-      <div
-        id="projects"
-        className="flex flex-col p-2 lg:p-10 min-w-full m-auto lg:min-w-[50%] lg:max-w-[50%] border-2 border-neutral-800 rounded-2xl select-none space-y-5"
-      >
         <Projects />
+        <WorkExperiences />
+        <motion.footer
+          className="mt-20 pt-8 border-t border-neutral-200 dark:border-neutral-800"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+            Connect
+          </p>
+          <div className="flex flex-col space-y-1 text-sm">
+            <motion.a
+              href="mailto:alanzhou318@gmail.com"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              alanzhou318@gmail.com
+            </motion.a>
+            <motion.a
+              href="https://github.com/alantensor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              Github
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/therealalan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
+              whileHover={{ x: 4 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              LinkedIn
+            </motion.a>
+          </div>
+        </motion.footer>
       </div>
     </div>
   );
