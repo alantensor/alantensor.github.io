@@ -34,7 +34,7 @@ export default function Projects() {
             >
               <a
                 href={project.href || project.github || "#"}
-                target={project.href || project.github ? "_blank" : undefined}
+                target={project.exp ? undefined : "_blank"}
                 rel="noopener noreferrer"
                 className="group relative block mb-3"
               >

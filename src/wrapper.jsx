@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import About from "./about";
 import WorkExperiences from "./workExperiences";
 import Projects from "./project";
@@ -42,17 +43,9 @@ export default function Wrapper() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
-            Connect
+            Links
           </p>
           <div className="flex flex-col space-y-1 text-sm">
-            <motion.a
-              href="mailto:alanzhou318@gmail.com"
-              className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-neutral-100 hover:underline"
-              whileHover={{ x: 4 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              alanzhou318@gmail.com
-            </motion.a>
             <motion.a
               href="https://github.com/alantensor"
               target="_blank"

@@ -7,7 +7,7 @@ export default function WorkExperiences() {
       role: "Software Engineer Co-op",
       period: "Incoming",
       // description: "Studying Computer Science at UBC",
-      link: "https://ubc.ca"
+      link: "https://www.huawei.com/ca/"
     },
     {
       company: "Intern Insider",

@@ -1,12 +1,13 @@
 export const projects = [
 	{
-		title: "Persective Projection",
+		title: "Perspective Projection",
 		description:
 		  "3D rendering with perspective projection and a moving camera",
-		href: "https://alantensor.github.io/projects/cameratest/",
+		href: "/experiments/3d-camera-test",
 		github: "https://github.com/alantensor/3D-Camera-Test",
 		imageName: "cubes.png",
 		tech: "JavaScript,HTML,CSS",
+    exp: true,
 	  },
   {
     title: "Leetgym.com",
