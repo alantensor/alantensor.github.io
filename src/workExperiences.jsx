@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 export default function WorkExperiences() {
   const experiences = [
     {
-      company: "Huawei Canada",
+      company: "Tetra Tech",
       role: "Software Engineer Co-op",
       period: "Incoming",
       // description: "Studying Computer Science at UBC",
-      link: "https://www.huawei.com/ca/"
+      link: "https://www.tetratech.com/"
     },
     {
       company: "Intern Insider",
